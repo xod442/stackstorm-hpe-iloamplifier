@@ -1,0 +1,13 @@
+---
+ref: iloamplifier
+name: iloamplifier
+description: HPE iLo Amplifier Integration Pack
+keywords:
+  - HPE OneView
+  - iLo
+version: 0.1.0
+python_versions:
+  - "2"
+  - "3"
+author: Rick Kauffman
+email: rick.a.kauffman@hpe.com

@@ -1,0 +1,15 @@
+---
+login_host:
+  description: "IP address of the iLo Amplifier instance (e.g.: 'fqdn.to.device' or '10.10.10.10')"
+  type: "string"
+  secret: false
+  required: true
+login_account:
+  description: "Username for iLo Amplifier"
+  type: "string"
+  required: true
+login_password:
+  description: "Password for iLo Amplifier"
+  type: "string"
+  secret: true
+  required: true

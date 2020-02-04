@@ -1,0 +1,7 @@
+---
+name: get_chassis
+pack: iloamplifier
+description: Get an array of chassis for the iLo Amplifier
+runner_type: python-script
+entry_point: get_chassis.py
+enabled: true
