@@ -31,7 +31,7 @@ class HpeIloBaseAction(Action):
         login_account = self.config['login_account']
         login_password = self.config['login_password']
         ### Create a REDFISH object
-        client = redfish.redfish_client(base_url=login_host,username=login_account,password=login_password,default_prefix='/redfish/v1')
+        client = redfish.redfish_client(base_url="172.18.35.193",username="Administrator",password="Plexxi100!",default_prefix='/redfish/v1')
         # Login into the server and create a session
         client.login(auth="session")
         return client
