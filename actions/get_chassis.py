@@ -23,8 +23,6 @@ from lib.actions import HpeIloBaseAction
 
 class chassis(HpeIloBaseAction):
     def run(self):
-        # Login into the server and create a session
-        self.client.login(auth="session")
         # Do a GET on a given path
         iLo_chassis = self.client.get("/redfish/v1/chassis/", None)
         return (True, iLo_chassis)
