@@ -17,9 +17,15 @@
 # __license__ = "Apache2.0"
 # __maintainer__ = "Rick Kauffman"
 # __email__ = "rick.a.kauffman@hpe.com"
+# To access what is returned
+# json load the response.text in your script...like this
+# ----------------------------------------------------------------
+# managers=json.loads(iLo_managers.text)
+# print(managers['Members'])
 
 
 from lib.actions import HpeIloBaseAction
+import json
 
 class chassis(HpeIloBaseAction):
     def run(self):
