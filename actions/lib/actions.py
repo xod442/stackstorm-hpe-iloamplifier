@@ -24,13 +24,17 @@ from st2common.runners.base_action import Action
 class HpeIloBaseAction(Action):
     def __init__(self,config):
         super(HpeIloBaseAction, self).__init__(config)
+        self.client = self._get_client()
 
+    def _get_client(self):
         login_host = self.config['login_host']
         login_account = self.config['login_account']
         login_password = self.config['login_password']
-
         ## Create a REDFISH object
-        self.client  = redfish.redfish_client(base_url=login_host, username=login_account, \
+        client = redfish.redfish_client(base_url=login_host, username=login_account, \
                                   password=login_password, default_prefix='/redfish/v1')
+
+        # Login into the server and create a session
+        client.login(auth="session")
 
         return client
