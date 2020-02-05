@@ -1,0 +1,7 @@
+---
+name: get_managers
+pack: iloamplifier
+description: Get an array of iLo managers from the iLo Amplifier
+runner_type: python-script
+entry_point: get_managers.py
+enabled: true
