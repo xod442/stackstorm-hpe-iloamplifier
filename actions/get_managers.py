@@ -25,4 +25,4 @@ class chassis(HpeIloBaseAction):
     def run(self):
         # Do a GET on a given path
         iLo_managers = self.client.get("/redfish/v1/managers/", None)
-        return (True, iLo_chassis)
+        return (True, iLo_managers)
